@@ -1,0 +1,112 @@
+﻿<div ng-controller="openAiEditorController">
+
+    <umb-editor-view>
+
+        <umb-editor-header name="'Generate text using OpenAI for ' + model.umbracoProperty.property.label"
+                           description="'Test'"
+                           name-locked="true"
+                           hide-alias="true"
+                           hide-icon="true"
+                           hide-description="false">
+        </umb-editor-header>
+
+        <umb-editor-container>
+            <umb-box>
+                <umb-box-content>
+
+                    <umb-control-group label="What would you like to generate?">
+
+                        <select ng-model="generateRequest.type" class="chat-gpt-text-area">
+                            <option value="0">Write content for website</option>
+                            <option value="1">Generate a list of keywords</option>
+                            <option value="2">Generate meta title and description</option>
+                            <option value="3">Grammar correction</option>
+                            <option value="4">Translate</option>
+                        </select>
+
+                        <textarea ng-model="generateRequest.text"
+                                  class="chat-gpt-text-area"
+                                  rows="10"
+                                  placeholder="Enter a prompt...">
+                        </textarea>
+
+                    </umb-control-group>
+
+                    <umb-control-group label="Maximum length:">
+                        <br /><br />
+                        <umb-range-slider ng-model="generateRequest.maximumLength"
+                                          options="maximumLengthOptions"
+                                          class="chat-gpt-range-slider"
+                                          on-update="onMaximumLengthUpdate(values)">
+                        </umb-range-slider>
+                        <br /><br />
+                    </umb-control-group>
+
+                    <umb-control-group label="Behavior model:">
+                        <br />
+                        <umb-range-slider ng-model="generateRequest.behaviorModel"
+                                          options="behaviorModelOptions"
+                                          class="chat-gpt-range-slider"
+                                          on-update="onBehaviorModelUpdate(values)">
+                        </umb-range-slider>
+                        <br /><br />
+                    </umb-control-group>
+
+                    <center>
+                        <umb-button type="button"
+                                    label="Generate"
+                                    button-style="success"
+                                    shortcut="enter"
+                                    action="generate()">
+                        </umb-button>
+                    </center>
+
+                </umb-box-content>
+            </umb-box>
+
+            <umb-box>
+                <umb-box-content>
+
+                    <umb-control-group label="Generated text:">
+
+                        <div ng-if="loading"
+                             class="chat-gpt-load-indicator">
+                            <umb-load-indicator>
+                            </umb-load-indicator>
+                        </div>
+
+                        <textarea ng-if="!loading"
+                                  ng-model="generateResponse.text"
+                                  class="chat-gpt-text-area"
+                                  rows="10">
+                        </textarea>
+
+                    </umb-control-group>
+
+                </umb-box-content>
+            </umb-box>
+        </umb-editor-container>
+
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+
+                <umb-button type="button"
+                            button-style="link"
+                            label="Close"
+                            shortcut="esc"
+                            action="model.close()">
+                </umb-button>
+
+                <umb-button type="button"
+                            button-style="success"
+                            label="Submit"
+                            shortcut="enter"
+                            action="submit()">
+                </umb-button>
+
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+
+    </umb-editor-view>
+
+</div>

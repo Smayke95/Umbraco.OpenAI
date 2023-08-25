@@ -1,0 +1,16 @@
+﻿.openai-button {
+    width: 152px;
+}
+
+.chat-gpt-text-area {
+    width: 100%;
+}
+
+.chat-gpt-range-slider {
+    display: block;
+    padding: 0 20px;
+}
+
+.chat-gpt-load-indicator {
+    height: 220px;
+}

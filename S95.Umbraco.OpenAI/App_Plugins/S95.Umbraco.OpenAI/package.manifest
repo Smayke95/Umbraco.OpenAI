@@ -1,0 +1,14 @@
+﻿{
+  "id": "S95.Umbraco.OpenAI",
+  "name": "Umbraco OpenAI",
+  "version": "1.0.0",
+  "css": [
+    "~/App_Plugins/S95.Umbraco.OpenAI/Css/openAiStyle.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/S95.Umbraco.OpenAI/Scripts/openAi.service.js",
+    "~/App_Plugins/S95.Umbraco.OpenAI/Scripts/openAiButton.component.js",
+    "~/App_Plugins/S95.Umbraco.OpenAI/Scripts/openAiButton.decorator.js",
+    "~/App_Plugins/S95.Umbraco.OpenAI/Scripts/openAiEditor.controller.js"
+  ]
+}

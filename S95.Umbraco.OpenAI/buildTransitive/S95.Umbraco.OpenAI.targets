@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <S95UmbracoOpenAIContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\S95.Umbraco.OpenAI\**\*.*</S95UmbracoOpenAIContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyS95UmbracoOpenAIAssets" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <S95UmbracoOpenAIContentFiles Include="$(S95UmbracoOpenAIContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying S95.Umbraco.OpenAI files: $(S95UmbracoOpenAIContentFilesPath) - #@(S95UmbracoOpenAIContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(S95UmbracoOpenAIContentFiles)" DestinationFiles="@(S95UmbracoOpenAIContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\S95.Umbraco.OpenAI\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearS95UmbracoOpenAIAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <S95UmbracoOpenAIDir Include="$(MSBuildProjectDirectory)\App_Plugins\S95.Umbraco.OpenAI\" />
+    </ItemGroup>
+    <Message Text="Clear old S95.Umbraco.OpenAI data" Importance="high" />
+    <RemoveDir Directories="@(S95UmbracoOpenAIDir)" />
+  </Target>
+</Project>
