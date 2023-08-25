@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
@@ -6,12 +6,15 @@
     <PackageId>S95.Umbraco.OpenAI</PackageId>
     <Title>S95.Umbraco.OpenAI</Title>
     <Description>Plugin for Umbraco CMS which integrates OpenAI.</Description>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <PackageTags>umbraco plugin package</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Smayke95</Authors>
     <PackageProjectUrl>https://github.com/Smayke95/Umbraco.OpenAI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Smayke95/Umbraco.OpenAI</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
