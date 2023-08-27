@@ -18,7 +18,7 @@
 
         const maxCharacters = $scope.model.umbracoProperty.property.config.maxChars
             ? $scope.model.umbracoProperty.property.config.maxChars
-            : ($scope.model.umbracoProperty.property.editor == "Umbraco.TextBox" ? 512 : 1000);
+            : ($scope.model.umbracoProperty.property.editor == 'Umbraco.TextBox' ? 512 : 1000);
 
         let labels = [];
         for (let i = 0; i < maxCharacters; i += maxCharacters / 5) {

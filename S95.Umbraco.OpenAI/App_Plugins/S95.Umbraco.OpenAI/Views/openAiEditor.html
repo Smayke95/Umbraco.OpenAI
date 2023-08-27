@@ -16,7 +16,7 @@
 
                     <umb-control-group label="What would you like to generate?">
 
-                        <select ng-model="generateRequest.type" class="chat-gpt-text-area">
+                        <select ng-model="generateRequest.type" class="open-ai-text-area">
                             <option value="0">Write content for website</option>
                             <option value="1">Generate a list of keywords</option>
                             <option value="2">Generate meta title and description</option>
@@ -25,7 +25,7 @@
                         </select>
 
                         <textarea ng-model="generateRequest.text"
-                                  class="chat-gpt-text-area"
+                                  class="open-ai-text-area"
                                   rows="10"
                                   placeholder="Enter a prompt...">
                         </textarea>
@@ -36,7 +36,7 @@
                         <br /><br />
                         <umb-range-slider ng-model="generateRequest.maximumLength"
                                           options="maximumLengthOptions"
-                                          class="chat-gpt-range-slider"
+                                          class="open-ai-range-slider"
                                           on-update="onMaximumLengthUpdate(values)">
                         </umb-range-slider>
                         <br /><br />
@@ -46,7 +46,7 @@
                         <br />
                         <umb-range-slider ng-model="generateRequest.behaviorModel"
                                           options="behaviorModelOptions"
-                                          class="chat-gpt-range-slider"
+                                          class="open-ai-range-slider"
                                           on-update="onBehaviorModelUpdate(values)">
                         </umb-range-slider>
                         <br /><br />
@@ -70,14 +70,14 @@
                     <umb-control-group label="Generated text:">
 
                         <div ng-if="loading"
-                             class="chat-gpt-load-indicator">
+                             class="open-ai-load-indicator">
                             <umb-load-indicator>
                             </umb-load-indicator>
                         </div>
 
                         <textarea ng-if="!loading"
                                   ng-model="generateResponse.text"
-                                  class="chat-gpt-text-area"
+                                  class="open-ai-text-area"
                                   rows="10">
                         </textarea>
 

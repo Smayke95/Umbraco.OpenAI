@@ -1,7 +1,7 @@
-﻿angular.module("umbraco").component("openAiButton", {
+﻿angular.module('umbraco').component('openAiButton', {
     templateUrl: '/App_Plugins/S95.Umbraco.OpenAI/Views/openAiButton.html',
     require: {
-        umbProperty: "^^umbProperty"
+        umbProperty: '^^umbProperty'
     },
     controller: [
 
@@ -38,8 +38,8 @@
 
             $scope.updatePositionInDom = () => {
                 $timeout(() => {
-                    const $controls = $element.prev(".controls");
-                    const $propertyEditor = $controls.find("ng-form");
+                    const $controls = $element.prev('.controls');
+                    const $propertyEditor = $controls.find('ng-form');
 
                     if ($propertyEditor.length > 0) {
                         $propertyEditor.append($element);
