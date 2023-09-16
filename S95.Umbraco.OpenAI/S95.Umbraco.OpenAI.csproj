@@ -6,9 +6,9 @@
     <PackageId>S95.Umbraco.OpenAI</PackageId>
     <Title>S95.Umbraco.OpenAI</Title>
     <Description>Plugin for Umbraco CMS which integrates OpenAI.</Description>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
     <PackageTags>umbraco plugin package</PackageTags>
     <Authors>Smayke95</Authors>
     <PackageProjectUrl>https://github.com/Smayke95/Umbraco.OpenAI</PackageProjectUrl>
@@ -18,7 +18,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0" />
   </ItemGroup>
 
