@@ -10,3 +10,9 @@
 .open-ai-load-indicator {
     height: 220px;
 }
+
+.icon-open-ai {
+    background-image: url('/App_Plugins/S95.Umbraco.OpenAI/Icons/icon-open-ai.svg');
+    display: inline-block;
+    width: 15px;
+}

@@ -6,24 +6,35 @@
     <PackageId>S95.Umbraco.OpenAI</PackageId>
     <Title>S95.Umbraco.OpenAI</Title>
     <Description>Plugin for Umbraco CMS which integrates OpenAI.</Description>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4</AssemblyVersion>
-    <FileVersion>1.0.4</FileVersion>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.5</AssemblyVersion>
+    <FileVersion>1.0.5</FileVersion>
+    <PackageTags>umbraco umbraco-marketplace plugin package</PackageTags>
     <Authors>Smayke95</Authors>
     <PackageProjectUrl>https://github.com/Smayke95/Umbraco.OpenAI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Smayke95/Umbraco.OpenAI</RepositoryUrl>
+    <PackageIcon>icon-open-ai.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\S95.Umbraco.OpenAI\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
-    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+    <EmbeddedResource Include="Css\openAiStyle.css" />
+    <EmbeddedResource Include="Icons\icon-open-ai.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\icon-open-ai.svg" />
+    <EmbeddedResource Include="Scripts\openAi.service.js" />
+    <EmbeddedResource Include="Scripts\openAiButton.component.js" />
+    <EmbeddedResource Include="Scripts\openAiButton.decorator.js" />
+    <EmbeddedResource Include="Scripts\openAiEditor.controller.js" />
+    <EmbeddedResource Include="Views\openAiButton.html" />
+    <EmbeddedResource Include="Views\openAiEditor.html" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "Title": "S95.Umbraco.OpenAI",
+  "AuthorDetails": {
+    "Name": "Smayke95",
+    "Url": "https://smayke95.github.io/"
+  },
+  "AlternatePackageNames": [
+    "Umbraco OpenAI"
+  ],
+  "Category": "Editor Tools",
+  "DocumentationUrl": "https://github.com/Smayke95/Umbraco.OpenAI",
+  "IssueTrackerUrl": "https://github.com/Smayke95/Umbraco.OpenAI/issues",
+  "LicenseTypes": [
+    "Free"
+  ],
+  "PackageType": "Package",
+  "PackagesByAuthor": [
+    "S95.Umbraco.GoogleTranslate"
+  ],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Smayke95/Umbraco.OpenAI/master/Screenshot_1.jpg",
+      "Caption": "Screenshot 1"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Smayke95/Umbraco.OpenAI/master/Screenshot_2.jpg",
+      "Caption": "Screenshot 2"
+    }
+  ],
+  "Tags": [
+	"editortools",
+	"chatgpt",
+    "translation"
+  ]
+}
