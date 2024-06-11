@@ -16,6 +16,7 @@
   ],
   "PackageType": "Package",
   "PackagesByAuthor": [
+    "S95.AspNetCore.Cloudinary",
     "S95.Umbraco.GoogleTranslate"
   ],
   "Screenshots": [

@@ -52,7 +52,7 @@ public class OpenAiService : IOpenAiService
                 ? Constants.DefaultModel
                 : _openAiSettings.Model,
             messages,
-            temperature = (int)request.BehaviorModel / 2,
+            temperature = (decimal)request.BehaviorModel / 3,
             max_tokens = request.MaximumLength
         });
 
