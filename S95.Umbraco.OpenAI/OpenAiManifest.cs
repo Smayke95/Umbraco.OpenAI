@@ -10,7 +10,7 @@ public class OpenAiManifest : IManifestFilter
         manifests.Add(new PackageManifest
         {
             PackageName = "Umbraco OpenAI",
-            Version = "1.0.6",
+            Version = "1.0.7",
             Stylesheets = new[]
             {
                 "/App_Plugins/S95.Umbraco.OpenAI/Css/openAiStyle.css"

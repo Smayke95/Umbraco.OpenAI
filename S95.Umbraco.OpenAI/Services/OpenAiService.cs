@@ -41,6 +41,11 @@ public class OpenAiService : IOpenAiService
             },
             new
             {
+                role = "system",
+                content = Constants.LimitMessage.Replace("{0}", request.MaximumLength.ToString())
+            },
+            new
+            {
                 role = "user",
                 content = request.Text
             }

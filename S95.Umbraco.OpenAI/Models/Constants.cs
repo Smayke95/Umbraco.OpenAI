@@ -14,4 +14,6 @@ public static class Constants
         "You will be provided with statements, and your task is to fix grammar for provided language.",
         "Convert provided text to another language. Both languages will be provided.",
     };
+
+    public static readonly string LimitMessage = "Limit your response to {0} characters.";
 }
